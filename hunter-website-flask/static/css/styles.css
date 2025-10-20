@@ -1,0 +1,478 @@
+:root {
+    --primary: #007BFF;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --white: #fff;
+    --black: #000;
+    --gradient: linear-gradient(45deg, var(--primary), var(--info));
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--white);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s ease, filter 0.3s ease; /* Added filter for subtle effects */
+}
+
+body:hover {
+    filter: brightness(1.05); /* Subtle brighten on hover */
+}
+
+.navbar .nav-link {
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: var(--primary) !important;
+    text-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Glowing effect */
+}
+
+.card {
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+    border-radius: 10px; /* Rounded corners for beauty */
+}
+
+.card:hover {
+    transform: translateY(-10px) rotate(1deg); /* Lift and slight tilt */
+    background-color: var(--light);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 15px; /* Softer corners on hover */
+}
+
+.btn {
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    border-radius: 20px; /* Rounded buttons */
+    padding: 10px 20px;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background: var(--gradient); /* Gradient on hover */
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+    color: var(--white);
+}
+
+.hero {
+    background: var(--dark);
+    color: var(--white);
+    transition: background 0.3s ease, color 0.3s ease, padding 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.hero:hover {
+    background: var(--gradient);
+    padding: 20px 0; /* Slight padding increase */
+    color: var(--white);
+}
+
+.bg-primary {
+    background: var(--primary) !important;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bg-primary:hover {
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.3); /* Inner glow */
+}
+
+.text-primary {
+    color: var(--primary) !important;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.text-primary:hover {
+    text-shadow: 0 0 8px rgba(0, 123, 255, 0.6); /* Glowing text */
+}
+
+.fa-3x {
+    color: var(--primary);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.fa-3x:hover {
+    transform: scale(1.2); /* Slight zoom */
+    color: var(--success); /* Color shift */
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: max-width 0.3s ease, height 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.img-fluid:hover {
+    max-width: 105%;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.1); /* Brighten image */
+}
+
+/* New styles for service cards */
+.service-card-small {
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+    transition: max-height 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    border-radius: 10px;
+}
+
+.service-card-small:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, var(--light), var(--white));
+}
+
+.card-body {
+    padding: 1rem;
+    transition: padding 0.3s ease, background-color 0.3s ease;
+}
+
+.card-body:hover {
+    padding: 1.2rem;
+    background-color: rgba(0, 123, 255, 0.1); /* Subtle tint */
+}
+
+.icon-container {
+    width: 60px;
+    margin-right: 1rem;
+    text-align: center;
+    transition: width 0.3s ease, margin 0.3s ease, transform 0.3s ease;
+}
+
+.icon-container:hover {
+    width: 70px;
+    margin-right: 1.5rem;
+    transform: rotate(5deg); /* Slight tilt */
+}
+
+.content-container {
+    flex-grow: 1;
+    transition: flex-grow 0.3s ease, opacity 0.3s ease;
+}
+
+.content-container:hover {
+    flex-grow: 1.1;
+    opacity: 0.9; /* Subtle fade */
+}
+
+.card-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    transition: font-size 0.3s ease, margin 0.3s ease, color 0.3s ease;
+}
+
+.card-title:hover {
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+    color: var(--primary);
+}
+
+.card-text {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    transition: font-size 0.3s ease, margin 0.3s ease, color 0.3s ease;
+}
+
+.card-text:hover {
+    font-size: 1rem;
+    color: var(--secondary);
+}
+
+.service-card-small .card-body {
+    min-height: 100px;
+    transition: min-height 0.3s ease, background-color 0.3s ease;
+}
+
+.service-card-small .card-body:hover {
+    min-height: 110px;
+    background-color: rgba(0, 123, 255, 0.05);
+}
+
+.d-flex {
+    display: flex !important;
+    transition: all 0.3s ease;
+}
+
+.align-items-center {
+    align-items: center !important;
+}
+
+.text-left {
+    text-align: left !important;
+    transition: text-align 0.3s ease, color 0.3s ease;
+}
+
+.text-left:hover {
+    color: var(--info);
+}
+
+/* New styles for Why Hunter image */
+.why-hunter-image {
+    margin: 2rem 0;
+    transition: margin 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-hunter-image:hover {
+    margin: 2.5rem 0;
+    padding: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.why-hunter-image .img-fluid {
+    max-height: 400px;
+    object-fit: cover;
+    transition: max-height 0.3s ease, object-position 0.3s ease, filter 0.3s ease;
+}
+
+.why-hunter-image .img-fluid:hover {
+    max-height: 420px;
+    object-position: center 10%;
+    filter: sepia(0.2); /* Artistic effect */
+}
+
+/* Updated styles for custom list with icons */
+.custom-list {
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+    transition: padding 0.3s ease, text-align 0.3s ease, background-color 0.3s ease;
+}
+
+.custom-list:hover {
+    background-color: rgba(0, 123, 255, 0.05);
+}
+
+.custom-list .list-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.custom-list .list-item:hover {
+    background-color: var(--light);
+    transform: translateY(-5px);
+}
+
+.custom-list .list-item i {
+    margin-right: 1rem;
+    color: var(--black);
+    transition: margin 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.custom-list .list-item:hover i {
+    margin-right: 1.5rem;
+    color: var(--primary);
+    transform: scale(1.2);
+}
+
+.custom-list .list-item span {
+    text-align: left;
+    font-size: 1.2rem;
+    transition: text-align 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+}
+
+.custom-list .list-item:hover span {
+    font-size: 1.3rem;
+    color: var(--info);
+}
+/* ===============================
+   MODERN BLACK FOOTER
+================================== */
+.modern-footer {
+    position: relative;
+    background: #000;
+    overflow: hidden;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Soft glowing gradient in background */
+.modern-footer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 40%, rgba(13,110,253,0.25), transparent 60%),
+                radial-gradient(circle at 80% 70%, rgba(255,255,255,0.1), transparent 60%);
+    opacity: 0.7;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+/* Dark overlay for depth */
+.footer-overlay {
+    background: linear-gradient(180deg, #000 0%, #080808 100%);
+    position: relative;
+    z-index: 2;
+}
+
+/* Social Icons */
+.social-icons a {
+    color: #fff;
+    margin: 0 15px;
+    font-size: 1.5rem;
+    display: inline-block;
+    transition: transform 0.4s ease, color 0.4s ease, text-shadow 0.4s ease;
+}
+
+.social-icons a:hover {
+    color: #0d6efd;
+    transform: scale(1.25) rotate(5deg);
+    text-shadow: 0 0 10px rgba(13,110,253,0.7);
+}
+
+/* Contact text */
+.footer-contact {
+    color: #ccc;
+    font-size: 1rem;
+    letter-spacing: 0.3px;
+}
+
+.footer-copy {
+    color: #777;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+/* Subtle animated shimmer */
+.modern-footer:hover::before {
+    animation: shimmer 5s infinite linear;
+}
+
+@keyframes shimmer {
+    0% { opacity: 0.6; transform: translateX(-5%); }
+    50% { opacity: 0.9; transform: translateX(5%); }
+    100% { opacity: 0.6; transform: translateX(-5%); }
+}
+/* ===============================
+   LET'S MAKE THINGS HAPPEN SECTION
+================================== */
+.lets-happen-section {
+    background-color: #000;
+    color: #fff;
+    padding: 80px 0;
+}
+
+.lets-happen-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.lets-happen-section p {
+    color: #ccc;
+    line-height: 1.8;
+}
+
+.lets-happen-section blockquote {
+    color: #bbb;
+    font-style: italic;
+    border-left: 3px solid #0d6efd;
+}
+
+/* Contact card on the right */
+.contact-card {
+    background: #fff;
+    color: #000;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(90deg, #0d6efd, #00bfff);
+}
+
+.contact-card h5 {
+    color: #000;
+}
+
+.contact-card input {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.contact-card input:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.2);
+}
+
+.contact-card button {
+    background: #0d6efd;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.contact-card button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+/* ===============================
+   FULL-WIDTH HERO BANNER
+================================== */
+.hero-banner {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Make image fill screen width and height */
+.hero-bg-img {
+    width: 100%;
+    height: 90vh; /* Adjust height as needed */
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(65%); /* Darken image for better text contrast */
+}
+
+/* Overlay for text and button */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-overlay h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+.hero-overlay .btn {
+    margin-top: 10px;
+    padding: 12px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.hero-overlay .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(13, 110, 253, 0.6);
+}

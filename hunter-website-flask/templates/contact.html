@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us - Hunter International{% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>Include detailed contact information, a contact form, and an invitation to visit or reach out.</p>
+        <p>STATE OF QATAR - Doha: C Ring, KGH Building, opposite Gulf times, 2 Floor, Office 205, p.o.BOX:4558 DOHA , QATAR.</p>
+        <img src="{{ url_for('static', filename='images/office/office-exterior.jpg') }}" alt="Office Exterior" class="img-fluid">
+        <form method="post" class="p-4 bg-light rounded mt-3">
+            <div class="mb-3">
+                <input type="text" name="name" placeholder="Your Name*" class="form-control">
+            </div>
+            <div class="mb-3">
+                <input type="email" name="email" placeholder="Your Email*" class="form-control">
+            </div>
+            <div class="mb-3">
+                <input type="tel" name="phone" placeholder="Your Phone Number*" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Hunter International{% endblock %}
+
+{% block content %}
+<div class="content-wrapper">
+
+    <!-- ===============================
+         FULL-WIDTH HERO BANNER SECTION
+    ================================== -->
+    <section class="hero-banner position-relative text-center text-white">
+        <img src="{{ url_for('static', filename='images/hero/banner1.jpg') }}" 
+             alt="Welcome to Hunter International" 
+             class="img-fluid w-100 hero-bg-img">
+
+        <div class="hero-overlay d-flex flex-column justify-content-center align-items-center">
+            <h1 class="fw-bold mb-4">Welcome to Hunter International</h1>
+            <a href="{{ url_for('about') }}" class="btn btn-primary btn-lg">Learn More</a>
+        </div>
+    </section>
+
+    <!-- ===============================
+         OUR SERVICES SECTION
+    ================================== -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Services</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Market Entry Strategy</h5>
+                            <p class="card-text">Detailed analysis and strategic planning.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Brand Health Tracking</h5>
+                            <p class="card-text">Continuous monitoring of brand performance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Customer Satisfaction</h5>
+                            <p class="card-text">In-depth analysis of customer satisfaction.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+{% endblock %}

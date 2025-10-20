@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+
+{% block title %}About Us - Hunter International{% endblock %}
+
+{% block content %}
+<section class="py-5">
+        <div class="container">
+        <h1 class="text-center mb-5">About Us</h1>
+            <p class="lead">Established in 2012, Hunter Marketing Research, since then we have been providing our clients with valuable Insights that drive their business success and leveraging data to empower their business strategies. Hunter Market Research is working across different sectors covering the complete spectrum of clients, business or cooperation, governmental agency or nonprofit organization, new entry to the market or market expansion, start up or entrepreneur, educational institute, advertising or PR agency, Consulting agency and Professional service providers such as law firms, providing holistic Market research services</p>
+        </div>
+    <div class="container">
+        <h1 class="text-center mb-5">Our Credentials</h1>
+        <p class="text-center">In 2007, with a passion for exceptional market research, Ramy Soliman began his journey as a field executive for one of the globally leading Market Research Companies. His dedication led to the inception of Hunter International in 2012 to satisfy the high demand for Market Research Services in Qatar. Hunter International is a firm that prides itself on precise, client-tailored insights. Under Ramy's leadership, Hunter has flourished, earning a reputation for innovative methods and robust analysis. The firm's growth is marked by global partnerships across diverse industries, establishing itself as a market research authority. Today, Hunter's reach extends beyond Qatar, with a significant presence in the Middle East and a commitment to excellence that drives its expanding influence in the field.</p>
+        <ul class="text-center custom-list">
+            <li class="list-item">
+                <i class="fas fa-search fa-2x text-primary"></i>
+                <span>We conduct all types of primary and secondary research.</span>
+            </li>
+            <li class="list-item">
+                <i class="fas fa-globe fa-2x text-primary"></i>
+                <span>Experience in long term projects handling throughout different geographics.</span>
+            </li>
+            <li class="list-item">
+                <i class="fas fa-chart-line fa-2x text-primary"></i>
+                <span>Our services range from data collection and data processing to analysis and reporting.</span>
+            </li>
+            <li class="list-item">
+                <i class="fas fa-users fa-2x text-primary"></i>
+                <span>Large size qualified teams of recruiters and interviewers in the ME and the largest in Qatar.</span>
+            </li>
+            <li class="list-item">
+                <i class="fas fa-clock fa-2x text-primary"></i>
+                <span>High quality work within the stipulated time.</span>
+            </li>
+            <li class="list-item">
+                <i class="fas fa-map-marker-alt fa-2x text-primary"></i>
+                <span>Presence across the Middle East, Africa, and expanding.</span>
+            </li>
+            <li class="list-item">
+                <i class="fas fa-cogs fa-2x text-primary"></i>
+                <span>Catering to the client’s needs with customized solutions.</span>
+            </li>
+            <li class="list-item">
+                <i class="fas fa-check-double fa-2x text-primary"></i>
+                <span>Complete End to End Solutions.</span>
+            </li>
+        </ul>
+
+        <!-- Global Reach Section -->
+        <h2 class="text-center mt-5">Global Reach</h2>
+        <div class="global-reach text-center mt-3">
+            <img src="{{ url_for('static', filename='images/about_us/global-reach-map.png') }}" alt="Global Reach Map" class="img-fluid" style="max-width: 100%; position: relative;">
+            <div class="overlay"></div>
+            <ul class="text-center mt-3">
+                <p>Middle East (Qatar, Kuwait, KSA, UAE, Oman, Jordan, Iraq, and Bahrain)</p>
+                <p>Africa (Egypt, Tunisia, Kenya, Nigeria, Morocco, Algeria, and Ghana)</p>
+            </ul>
+        </div>
+
+        <!-- Our Journey Section -->
+        <h2 class="text-center mt-5">Our Journey</h2>
+        <div class="our-journey text-center mt-3">
+            <img src="{{ url_for('static', filename='images/about_us/our-journey-timeline.png') }}" alt="Our Journey Timeline" class="img-fluid" style="max-width: 100%;">
+        </div>
+
+        <!-- Meet Our Team Section -->
+        <h2 class="text-center mt-5">Meet Our Team</h2>
+        <div class="row text-center mt-3 team-grid">
+            <div class="col-md-3 mb-4">
+                <div class="team-card">
+                    <img src="{{ url_for('static', filename='images/about_us/team/ramy-soliman.jpg') }}" alt="Ramy Soliman" class="img-fluid rounded-circle" style="max-width: 150px;">
+                    <h5>Ramy Soliman</h5>
+                    <p>Managing Director</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="team-card">
+                    <img src="{{ url_for('static', filename='images/about_us/team/hamdi-jumaa.jpg') }}" alt="Hamdi Jumaa" class="img-fluid rounded-circle" style="max-width: 150px;">
+                    <h5>Hamdi Jumaa</h5>
+                    <p>Business Development Director</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="team-card">
+                    <img src="{{ url_for('static', filename='images/about_us/team/hend-mohamed.jpg') }}" alt="Hend Mohamed" class="img-fluid rounded-circle" style="max-width: 150px;">
+                    <h5>Hend Mohamed</h5>
+                    <p>Research Director</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="team-card">
+                    <img src="{{ url_for('static', filename='images/about_us/team/unknown-field-manager.jpg') }}" alt="Field Manager" class="img-fluid rounded-circle" style="max-width: 150px;">
+                    <h5>UNKNOWN</h5>
+                    <p>Field Manager</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="lets-happen-section text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Left Text -->
+            <div class="col-md-6 mb-4 mb-md-0">
+                <h2 class="fw-bold mb-4">Let’s Make Things Happen</h2>
+                <p class="lead mb-4">
+                    At Hunter International, our success is intertwined with the success of our esteemed clients.
+                    We take pride in collaborating with diverse organizations across industries to deliver impactful
+                    market research solutions.
+                </p>
+                <blockquote class="fst-italic text-muted small border-start border-light ps-3">
+                    “The team at Hunter Marketing Consultant is fabulous. They helped us unlock our potential online and offline.
+                    We have experienced year-on-year growth due to their progressive approach.”
+                </blockquote>
+            </div>
+
+            <!-- Right Form -->
+            <div class="col-md-6">
+                <div class="contact-card p-4 rounded-4 shadow-lg">
+                    <h5 class="fw-semibold mb-3">Get in Touch</h5>
+                        <div class="mb-3">
+                            <input type="text" name="name" placeholder="Your Name*" class="form-control form-control-lg">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" name="email" placeholder="Your Email*" class="form-control form-control-lg">
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" name="phone" placeholder="Your Phone Number*" class="form-control form-control-lg">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg w-100">Get a Callback</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+{% endblock %}

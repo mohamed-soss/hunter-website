@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Hunter International{% endblock %}</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="{{ url_for('static', filename='images/logos/logo.png') }}" alt="Hunter Logo" style="height: 50px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="/services" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/services#market-entry">Market Entry Strategy</a></li>
+                            <li><a class="dropdown-item" href="/services#brand-health">Brand Health Tracking</a></li>
+                            <li><a class="dropdown-item" href="/services#customer-satisfaction">Customer Satisfaction Studies</a></li>
+                            <li><a class="dropdown-item" href="/services#product-development">Product Development Research</a></li>
+                            <li><a class="dropdown-item" href="/services#advertising">Advertising Effectiveness</a></li>
+                            <li><a class="dropdown-item" href="/services#pricing">Pricing Strategy Analysis</a></li>
+                            <li><a class="dropdown-item" href="/services#sales-channel">Sales Channel Optimization</a></li>
+                            <li><a class="dropdown-item" href="/services#segmentation">Segmentation and Targeting</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/why-us">Why Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/case-studies">Case Studies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About Us</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-primary" href="tel:(974)4488-6218">
+                            <i class="fas fa-phone text-primary me-1"></i>(974) 4488-6218
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Page Content -->
+    {% block content %}{% endblock %}
+
+    <!-- Modern Footer -->
+    <footer class="modern-footer text-white text-center mt-5">
+        <div class="footer-overlay py-5">
+            <div class="container">
+                <!-- Logo -->
+                <div class="mb-4">
+                    <img src="{{ url_for('static', filename='images/logos/logo.png') }}" alt="Hunter Logo" style="height:60px;">
+                </div>
+
+                <!-- Social & Contact Icons -->
+                <div class="social-icons mb-4">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:Ramy.soliman@hunter.com.qa"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:(974)4488-6218"><i class="fas fa-phone"></i></a>
+                </div>
+
+                <!-- Contact Details -->
+                <p class="footer-contact mb-3">
+                    <strong>Email:</strong> Ramy.soliman@hunter.com.qa &nbsp; | &nbsp;
+                    <strong>Phone:</strong> (974) 4488-6218
+                </p>
+
+                <!-- Copyright -->
+                <p class="footer-copy mb-0">&copy; 2025 Hunter International. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

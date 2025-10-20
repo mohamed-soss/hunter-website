@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Case Studies - Hunter International{% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <h1>Case Studies</h1>
+        <p>Template information for case studies. Edit this section with real case studies as needed.</p>
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5>Case Study Title Placeholder</h5>
+                <p>Description placeholder. Edit as needed.</p>
+                <img src="{{ url_for('static', filename='images/case_studies/case-study1.jpg') }}" alt="Case Study Image" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
